@@ -1,3 +1,7 @@
+{% load bootstrap_themes %}
+
+{% bootstrap_styles theme='superhero' type='css' %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,18 +10,23 @@
     </head>
     <body>
         <h1 align="center">Gesti&oacute;n de Libros</h1>
-        {% for libro in lista_libros %}
-            <div>
-                <h3>{{libro.nombre}}</h3>
-                <div>
-                    <h5>{{libro.autor}}</h5>
-                    <h6>{{libro.editorial}}</h6>
-                </div>
-                <img style="height: 200px; width: 100%; display: block;" src="{{libro.urlImagen}}" alt="Card image">
+        <span></span>
+        <div style="text-align:center;">
+             <button type="button" class="btn btn-success btn-lg">Agregar libro</button>
+        </div>
 
-                <div class="card-body">
-                    <button type="button">Ver detalles</button>
-                    <button type="button">Eliminar</button>
+        {% for libro in lista_libros %}
+            <div class="card col-md-4">
+                <h3 class="card-header" style="text-align:center;">{{libro.nombre}}</h3>
+                <div class="card-body" style="text-align:center;">
+                    <h5 class="card-title">{{libro.autor}}</h5>
+                    <h6 class="card-subtitle text-muted">{{libro.editorial}}</h6>
+                </div>
+                <img style="height: 50%; width: 50%; display:block; margin:auto" src="{{libro.urlImagen}}" alt="Card image">
+
+                <div class="card-body" style="text-align:center;">
+                    <button type="button" class="btn btn-primary">Ver detalles</button>
+                    <button type="button" class="btn btn-warning">Eliminar</button>
                 </div>
             </div>
         {% endfor%}
