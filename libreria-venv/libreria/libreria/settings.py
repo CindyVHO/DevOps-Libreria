@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'CRUDLibreria',
     'bootstrap3',
-    'bootstrap-themes',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gesti&oacute;n de Libros</title>
+    </head>
+    <body>
+        <h1 align="center">Gesti&oacute;n de Libros</h1>
+        {% for libro in lista_libros %}
+            <div>
+                <h3>{{libro.nombre}}</h3>
+                <div>
+                    <h5>{{libro.autor}}</h5>
+                    <h6>{{libro.editorial}}</h6>
+                </div>
+                <img style="height: 200px; width: 100%; display: block;" src="{{libro.urlImagen}}" alt="Card image">
+
+                <div class="card-body">
+                    <button type="button">Ver detalles</button>
+                    <button type="button">Eliminar</button>
+                </div>
+            </div>
+        {% endfor%}
+    </body>
+</html>
+

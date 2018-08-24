@@ -6,9 +6,9 @@ class Libro(models.Model):
     nombre = models.CharField('nombre', max_length=100)
     autor = models.CharField('autor', max_length=100)
     isbn = models.CharField('isbn', max_length=100)
-    urlImagen = models.CharField('urlImg', max_length=100)
+    urlImagen = models.CharField('Ruta imagen', max_length=100)
     editorial = models.CharField('editorial', max_length=100)
-    anioPublicacion = models.CharField('anioPublicacion', max_length=100)
+    anioPublicacion = models.CharField('Año publicacion', max_length=100)
 
     class Meta:
         verbose_name = 'libro'
