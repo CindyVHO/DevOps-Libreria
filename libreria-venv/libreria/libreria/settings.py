@@ -37,10 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'CRUDLibreria',
     'bootstrap3',
     'bootstrap_themes',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.DjangoModelPermissions',),
+    'PAGINATE_BY': 10
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
