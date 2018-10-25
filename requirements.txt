@@ -1,4 +1,4 @@
-Django==2.1
+Django==1.11.16
 django-bootstrap-themes==3.3.6
 django-bootstrap3==10.0.1
 djangorestframework==3.8.2
