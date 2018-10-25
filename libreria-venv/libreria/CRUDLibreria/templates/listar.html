@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="row">
+    <!-- mostramos los mensajes flash -->
+    {% if messages %}
+        <div class="alert alert-success">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
+    {% endif %}
+    <div style="text-align:center;">
+             <a type="button" class="btn btn-success btn-lg" href="{% url 'agregarLibros' %}">Agregar libro</a>
+        </div>
+            {% if lista_libros|length > 0 %}
+                {% for libro in lista_libros %}
+                <div class="card col-md-4">
+                    <h3 class="card-header" style="text-align:center;">{{libro.nombre}}</h3>
+                    <div class="card-body" style="text-align:center;">
+                        <h5 class="card-title">{{libro.autor}}</h5>
+                        <h6 class="card-subtitle text-muted">{{libro.editorial}}</h6>
+                    </div>
+                    <img style="height: 50%; width: 50%; display:block; margin:auto" src="{{libro.urlImagen}}" alt="Card image">
+
+                    <div class="card-body" style="text-align:center;">
+                        <a type="button" class="btn btn-primary" href="{% url 'actualizarLibros' libroid=libro.id %}">Ver detalles</a>
+                        <a type="button" class="btn btn-warning" href="{% url 'eliminarLibros' libroid=libro.id %}">Eliminar</a>
+                    </div>
+                </div>
+                {% endfor%}
+            {% else %}
+                <p>No hay posts</p>
+            {% endif %}
+
+</div>
+{% endblock %}

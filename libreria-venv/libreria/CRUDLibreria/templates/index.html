@@ -7,29 +7,18 @@
     <head>
         <meta charset="UTF-8">
         <title>Gesti&oacute;n de Libros</title>
+        <!-- <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/superhero/bootstrap.min.css"> -->
     </head>
     <body>
         <h1 align="center">Gesti&oacute;n de Libros</h1>
         <span></span>
-        <div style="text-align:center;">
-             <button type="button" class="btn btn-success btn-lg">Agregar libro</button>
+
+        <div class="container">
+        <!-- bloque de contenido para el contenido de la página-->
+        {% block content %}
+
+        {% endblock %}
         </div>
-
-        {% for libro in lista_libros %}
-            <div class="card col-md-4">
-                <h3 class="card-header" style="text-align:center;">{{libro.nombre}}</h3>
-                <div class="card-body" style="text-align:center;">
-                    <h5 class="card-title">{{libro.autor}}</h5>
-                    <h6 class="card-subtitle text-muted">{{libro.editorial}}</h6>
-                </div>
-                <img style="height: 50%; width: 50%; display:block; margin:auto" src="{{libro.urlImagen}}" alt="Card image">
-
-                <div class="card-body" style="text-align:center;">
-                    <button type="button" class="btn btn-primary">Ver detalles</button>
-                    <button type="button" class="btn btn-warning">Eliminar</button>
-                </div>
-            </div>
-        {% endfor%}
     </body>
 </html>
 

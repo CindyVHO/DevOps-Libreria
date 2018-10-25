@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block content %}
+<span></span>
+<div class="row">
+    <form action="" method="post">{% csrf_token %}
+        {{ form.as_p}}
+        <input type="submit" class="btn btn-success" value="Submit">
+    </form>
+</div>
+{% endblock %}
+<!--finaliza el bloque content-->
