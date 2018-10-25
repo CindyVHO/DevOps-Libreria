@@ -1,9 +1,8 @@
 Django==2.1
 django-bootstrap-themes==3.3.6
 django-bootstrap3==10.0.1
-django-crispy-forms==1.7.2
 djangorestframework==3.8.2
 psycopg2==2.7.5
 psycopg2-binary==2.7.5
 pytz==2018.5
-pip==18.3
+
