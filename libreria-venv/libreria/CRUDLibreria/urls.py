@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from . import  views
+from . import views
 
 urlpatterns = [
     url(r'^$', views.listarLibros, name='listaLibros'),
@@ -9,4 +9,3 @@ urlpatterns = [
     url(r'^(?P<libroid>\d+)/delete/', views.eliminarLibros, name='eliminarLibros'),
 
 ]
-
