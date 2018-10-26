@@ -78,26 +78,23 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'libreria.wsgi.application'
 
+DATABASES = {}
+
+import dj_database_url
+
+DATABASES['default'] = dj_database_url.config()
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-engine = os.environ.get('DBENGINE', 'django.db.backends.postgresql'),
-name = os.environ.get('DBNAME', 'dbname_notprovided'),
-password = os.environ.get('DBPASSWORD', 'dbpassword_notprovided'),
-user = os.environ.get('DBUSER', 'dbuser_notprovided'),
-host = os.environ.get('DBHOST','dbhost_notprovided'),
+#engine = os.environ.get('DBENGINE', 'django.db.backends.postgresql'),
+#name = os.environ.get('DBNAME', 'dbname_notprovided'),
+#password = os.environ.get('DBPASSWORD', 'dbpassword_notprovided'),
+#user = os.environ.get('DBUSER', 'dbuser_notprovided'),
+#host = os.environ.get('DBHOST','dbhost_notprovided'),
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': engine,
-        'NAME': name,
-        'USER': user,
-        'PASSWORD': password,
-        'HOST': host,
-        'PORT': '5432',
-    }
-}
+
+
 
 
 # Password validation
