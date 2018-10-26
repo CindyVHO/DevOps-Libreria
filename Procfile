@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath libreria libreria.wsgi
+web: gunicorn --pythonpath libreria.wsgi
