@@ -1,1 +1,1 @@
-web: cd libreria && gunicorn libreria.wsgi:application
+web: cd libreria-venv/libreria && gunicorn libreria.wsgi:application
