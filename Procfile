@@ -1,1 +1,1 @@
-web: gunicorn --log-file -
+web: gunicorn CRUDLibreria.wsgi:application
