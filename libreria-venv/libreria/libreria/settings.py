@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'libreria.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 engine = os.environ.get('DBENGINE', 'django.db.backends.postgresql'),
-name = os.environ['DBNAME', 'dbname_notprovided'],
-password = os.environ['DBPASSWORD', 'dbpassword_notprovided'],
-user = os.environ['DBUSER', 'dbuser_notprovided'],
-host = os.environ['DBHOST','dbhost_notprovided'],
+name = os.environ.get('DBNAME', 'dbname_notprovided'),
+password = os.environ.get('DBPASSWORD', 'dbpassword_notprovided'),
+user = os.environ.get('DBUSER', 'dbuser_notprovided'),
+host = os.environ.get('DBHOST','dbhost_notprovided'),
 
 
 DATABASES = {
