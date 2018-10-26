@@ -1,1 +1,1 @@
-web: gunicorn DevOps-Libreria.wsgi --log-file -
+web: gunicorn libreria.wsgi --log-file -
