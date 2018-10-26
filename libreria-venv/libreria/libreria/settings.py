@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'libreria.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-engine = os.environ['DNENGINE'],
+engine = os.environ['DBENGINE'],
 name = os.environ['DBNAME'],
 password = os.environ['DBPASSWORD'],
 user = os.environ['DBUSER'],
