@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath libreria.wsgi
+web: gunicorn --log-file -
